@@ -1,0 +1,97 @@
+body {
+    display: block;
+    
+}
+
+#myCollection {
+    width: 50%;
+    position: absolute;
+    
+}
+.table {
+    width: 100%;
+    
+}
+
+h1 {
+    color: #464655;
+    text-align: center;
+    padding-bottom: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}
+
+th {
+    color: #CE796B;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 20%;
+    text-align: left;
+    border-bottom: 4px solid #464655;
+    padding: .5em 1em;
+    font-size: 1.2em;
+}
+
+td {
+    padding: 1em;
+    border-bottom: 4px solid #464655;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+    
+}
+
+button {
+    background-color: #7E846B;
+    color: white;
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8em;
+}
+
+button:hover {
+    background-color: #2F2504;
+}
+
+.special, .legend{
+    border: 4px solid #94958B;
+    color: #CE796B;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.legend {
+    position: relative;
+    float: right;
+    width: 10%;
+    margin-right: 3em;
+    margin-top: 3em;
+    padding: .5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.regular {
+    background-color: #EAE0CC;
+}
+
+fieldset {
+    border: 4px solid #464655;
+}
+
+legend {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #CE796B;
+}
+
+form {
+    width: 50%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.form {
+    padding: .3em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+

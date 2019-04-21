@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Show and Tell</title>
+    </head>
+
+    <body>
+       
+         <div id="myCollection" v-cloak>
+            <h1>The Beginning of Kodak Cameras collection!</h1>
+            <table class="table">
+                <thead class="header">
+                    <th class="tableHeader">Name</th>
+                    <th class="tableHeader">Manufacturer</th>
+                    <th class="tableHeader">Year Made</th>
+                    <th class="tableHeader">Location Made</th>
+                    <th class="tableHeader">Description</th>
+                    <th class="tableHeader">Action</th>
+                </thead>
+                <tbody>
+                    <tr v-for="(cameras, index) in cameras" :key="cameras.name"
+                    v-bind:class="{special:index===2}">
+                        <td>{{cameras.name}}</td>
+                        <td>{{cameras.manufacturer}}</td>
+                        <td>{{cameras.yearMade}}</td>
+                        <td>{{cameras.locationMade}}</td>
+                        <td>{{cameras.description}}</td>
+                        <td><button type="button" v-on:click="deleteCamera(cameras)">Delete</button></td> 
+                    </tr>
+                </tbody>
+            </table>
+        
+
+        <form v-on:submit.prevent="addNewCamera">
+            <fieldset>
+                <legend>Add your favorite camera!</legend>
+                <div class="form">
+                    <label>Name: <input type="text" v-model="nameInput"></label>
+                </div>
+                <div class="form">
+                    <label>Manufacturer: <input type="text" v-model="manufacturerInput"></label>
+                </div>
+                <div class="form">
+                    <label>Year Made: <input type="text" v-model="yearMadeInput"></label>
+                </div>
+                <div class="form">
+                    <label>Location Made: <input type="text" v-model="locationMadeInput"></label>
+                </div>
+                <div class="form">
+                    <label>Description: <input type="text" v-model="descriptionInput"></label>
+                </div>
+                <div class="form">
+                    <label>Id: <input type="text" v-model="idInput"></label>
+                </div>
+                <button type="submit" id="add">Add camera</button>
+            </fieldset>
+        </form>
+    
+    </div>
+
+    <div class="legend">
+        <p >One of my favorite cameras that I collect!</p>
+    </div>
+
+
+
+        <script src="vue.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
