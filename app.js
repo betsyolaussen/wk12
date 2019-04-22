@@ -83,6 +83,7 @@ var vm = new Vue ({
         },
         */
         addNewCamera: function () {
+            if (this.validation()) {
             let newCamera = {
                 name: this.nameInput,
                 manufacturer: this.manufacturerInput,
@@ -92,7 +93,8 @@ var vm = new Vue ({
                 id: this.idInput
             }
             this.cameras.push(newCamera);
-            //this.nameInput = this.manufacturerInput = this.yearMadeInput = this.locationMadeInput = this.descriptionInput = this.idInput = "";
+            this.nameInput = this.manufacturerInput = this.yearMadeInput = this.locationMadeInput = this.descriptionInput = this.idInput = "";
+            }
         },
         validation: function () {
             if (this.nameInput ==="" ||
