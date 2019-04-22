@@ -17,11 +17,21 @@
                     <th class="tableHeader">Year Made</th>
                     <th class="tableHeader">Location Made</th>
                     <th class="tableHeader">Description</th>
-                    <th class="tableHeader">Action</th>
+                    <!--<th class="tableHeader">Action</th>-->
                 </thead>
                 <tbody>
+                    <template>
+                    <kodak-component
+                    v-for="(cameras, index) in cameras"
+                    :class="{special:index===2}"
+                    v-bind:key="cameras.name"
+                    v-bind:cameras="cameras">
+                    </kodak-component>
+                    </template>
+
+                    <!--
                     <tr v-for="(cameras, index) in cameras" :key="cameras.name"
-                    v-bind:class="{special:index===2}">
+                    v-bind:class="">
                         <td>{{cameras.name}}</td>
                         <td>{{cameras.manufacturer}}</td>
                         <td>{{cameras.yearMade}}</td>
@@ -29,6 +39,8 @@
                         <td>{{cameras.description}}</td>
                         <td><button type="button" v-on:click="deleteCamera(cameras)">Delete</button></td> 
                     </tr>
+                    -->
+
                 </tbody>
             </table>
         

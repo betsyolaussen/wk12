@@ -1,4 +1,20 @@
-var camera = new Vue ({
+Vue.component('kodak-component', {
+    props: ['cameras'],
+    template:`
+        <tr>
+            <td>{{cameras.name}}</td>
+            <td>{{cameras.manufacturer}}</td>
+            <td>{{cameras.yearMade}}</td>
+            <td>{{cameras.locationMade}}</td>
+            <td>{{cameras.description}}</td>
+        </tr>`,
+
+        data: function() {
+            return {cameras: []}
+        }
+        
+})
+var vm = new Vue ({
     el: "#myCollection",
     data: {
         nameInput: "",
@@ -54,6 +70,7 @@ var camera = new Vue ({
     },
 
     methods: {
+        /*
         deleteCamera: function(cameraObject) {
             this.cameras = this.cameras.filter
             (function (cameras) {
@@ -64,6 +81,7 @@ var camera = new Vue ({
                 }
             })
         },
+        */
         addNewCamera: function () {
             let newCamera = {
                 name: this.nameInput,
